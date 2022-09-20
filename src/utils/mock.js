@@ -16,6 +16,8 @@ import kosmos from "../assets/img/Kosmos-1.jpeg";
 import leruaMerlen1 from "../assets/img/lerua-merlen-1.jpg";
 import obi1 from "../assets/img/OBI-1.jpg";
 import zhkDmitrovskaya from "../assets/img/ЖК_Дмитровская.jpg";
+import rostelekom from "../assets/img/серверная_ростелеком.jpg";
+import rostelekom2 from "../assets/img/серверная_ростелеком2.jpg";
 
 export const cards = [
   {
