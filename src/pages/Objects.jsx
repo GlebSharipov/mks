@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { cards } from "../utils/mock";
+import { COLORS } from "../assets/colors";
 import Modal from "react-modal";
+import cross from "../assets/img/cross.png";
 
 const customStyles = {
   content: {
@@ -39,7 +41,13 @@ function Objects() {
         style={customStyles}
         contentLabel="Example Modal"
       >
-        <Title>{cards[cardId]?.title}</Title>
+        <TopPart>
+          <Title>{cards[cardId]?.title}</Title>
+
+          <CloseButton onClick={closeModal}>
+            <CrossIcon $src={cross} />
+          </CloseButton>
+        </TopPart>
 
         <Container>
           <Img $src={cards[cardId]?.img} />
@@ -75,6 +83,12 @@ const Container = styled.div`
   padding-top: 10px;
 `;
 
+const TopPart = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
 const Description = styled.div`
   padding: 5px;
 `;
@@ -82,6 +96,15 @@ const Description = styled.div`
 const Text = styled.p`
   font-size: 18px;
   color: #7a8999;
+`;
+
+const CloseButton = styled.button`
+  border-radius: 50%;
+  border: none;
+
+  &:hover {
+    transform: translateY(-1px);
+  }
 `;
 
 const Card = styled.div`
@@ -101,6 +124,13 @@ const Img = styled.img.attrs((props) => ({
 }))`
   height: 250px;
   margin-bottom: 10px;
+`;
+
+const CrossIcon = styled.img.attrs((props) => ({
+  src: props.$src,
+}))`
+  width: 20px;
+  height: 20px;
 `;
 
 const Title = styled.h2`
