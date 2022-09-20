@@ -11,7 +11,7 @@ import carDealershipWV from "../assets/img/Автосалон_WV.jpg";
 import hotelComplexWV from "../assets/img/Гостиничный_комплекс_WV.jpg";
 import arena1 from "../assets/img/arena-1.jpeg";
 import festival from "../assets/img/Festival_Omsk.jpg";
-import korston from "../assets/img/korston.jpg";
+import korston from "../assets/img/Korston.jpg";
 import kosmos from "../assets/img/Kosmos-1.jpeg";
 import leruaMerlen1 from "../assets/img/lerua-merlen-1.jpg";
 import obi1 from "../assets/img/OBI-1.jpg";
