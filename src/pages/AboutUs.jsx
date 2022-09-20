@@ -1,6 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
-import cardPhoto from "../assets/img/arena-1.jpeg";
+import bigTheater from "../assets/img/Большой_театр2.jpg";
+import corston from "../assets/img/Korston.jpg";
+import festivalOmsk from "../assets/img/Festival_Omsk.jpg";
 
 function AboutUs() {
   return (
@@ -59,21 +62,27 @@ function AboutUs() {
       </Activity>
 
       <Container>
-        <Title>НЕКОТОРЫЕ ОБЪЕКТЫ</Title>
+        <Title>Некоторые объекты</Title>
         <Objects>
           <Card>
-            <Img $src={cardPhoto} />
-            <TitleCard>Название Объекта</TitleCard>
+            <Link to="/objects">
+              <Img $src={bigTheater} />
+            </Link>
+            <TitleCard>Большой театр</TitleCard>
           </Card>
 
           <Card>
-            <Img $src={cardPhoto} />
-            <TitleCard>Название Объекта</TitleCard>
+            <Link to="/objects">
+              <Img $src={corston} />
+            </Link>
+            <TitleCard>Гостиничный комплекс Korston Казань</TitleCard>
           </Card>
 
           <Card>
-            <Img $src={cardPhoto} />
-            <TitleCard>Название Объекта</TitleCard>
+            <Link to="/objects">
+              <Img $src={festivalOmsk} />
+            </Link>
+            <TitleCard>Фестиваль Омск</TitleCard>
           </Card>
         </Objects>
       </Container>
@@ -139,7 +148,6 @@ const Objects = styled.div`
 `;
 
 const Card = styled.div`
-  cursor: pointer;
   max-width: 375px;
   margin-bottom: 25px;
 `;
@@ -147,7 +155,8 @@ const Card = styled.div`
 const Img = styled.img.attrs((props) => ({
   src: props.$src,
 }))`
-  z-index: -1;
+  cursor: pointer;
+  height: 280px;
   margin-bottom: 10px;
 
   &:hover {
