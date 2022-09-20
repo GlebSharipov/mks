@@ -1,12 +1,59 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { cards } from "../utils/mock";
+import Modal from "react-modal";
+
+const customStyles = {
+  content: {
+    width: "800px",
+    height: "800px",
+    top: "50%",
+    left: "50%",
+    right: "auto",
+    bottom: "auto",
+    marginRight: "-50%",
+    transform: "translate(-50%, -50%)",
+  },
+};
+
+Modal.setAppElement("#root");
 
 function Objects() {
+  const [modalIsOpen, setIsOpen] = useState(false);
+  const [cardId, setCardId] = useState();
+
+  function openModal(id) {
+    setCardId(id);
+    setIsOpen(true);
+  }
+
+  function closeModal() {
+    setIsOpen(false);
+  }
+
   return (
     <Root>
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        style={customStyles}
+        contentLabel="Example Modal"
+      >
+        <Title>{cards[cardId]?.title}</Title>
+
+        <Container>
+          <Img $src={cards[cardId]?.img} />
+        </Container>
+
+        <Title>Выполненные работы:</Title>
+
+        <Description>
+          <Text>{cards[cardId]?.description}</Text>
+        </Description>
+      </Modal>
+
       {cards.map((card) => (
-        <Card key={card.id}>
+        <Card onClick={() => openModal(card.id)} key={card.id}>
           <Img $src={card.img} />
           <Title>{card.title}</Title>
         </Card>
@@ -20,6 +67,21 @@ const Root = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+`;
+
+const Container = styled.div`
+  max-width: 380px;
+  padding-left: 5px;
+  padding-top: 10px;
+`;
+
+const Description = styled.div`
+  padding: 5px;
+`;
+
+const Text = styled.p`
+  font-size: 18px;
+  color: #7a8999;
 `;
 
 const Card = styled.div`
@@ -37,7 +99,6 @@ const Card = styled.div`
 const Img = styled.img.attrs((props) => ({
   src: props.$src,
 }))`
-  z-index: -1;
   height: 250px;
   margin-bottom: 10px;
 `;
