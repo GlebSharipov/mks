@@ -1,9 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
-import bigTheater from "../assets/img/Большой_театр2.jpg";
-import corston from "../assets/img/Korston.jpg";
-import festivalOmsk from "../assets/img/Festival_Omsk.jpg";
 
 function AboutUs() {
   return (
@@ -29,9 +25,12 @@ function AboutUs() {
 
       <Directions>
         <TitleDirection>Направления</TitleDirection>
-        <TypeOfWork>- Отопление объекта.</TypeOfWork>
-        <TypeOfWork>- Вентиляция и кондиционирование объекта.</TypeOfWork>
-        <TypeOfWork>- Водопровод и канализация.</TypeOfWork>
+        <TypeOfWork>- Вентиляция и кондиционирование.</TypeOfWork>
+        <TypeOfWork>- Отопление.</TypeOfWork>
+        <TypeOfWork>- Водоснабжение и водоотведение.</TypeOfWork>
+        <TypeOfWork>- Электрика.</TypeOfWork>
+        <TypeOfWork>- Пожаро-охранная сигнализация.</TypeOfWork>
+        <TypeOfWork>- Видеонаблюдение.</TypeOfWork>
       </Directions>
 
       <Activity>
@@ -47,7 +46,7 @@ function AboutUs() {
           средств механизации в сочетании с высокой культурой выполнения работ
           нашими сотрудниками – формула успеха, из-за которой уже не один
           десяток лет клиенты самого разного профиля хотят видеть на своих
-          объектах именно Монтаж Комплект Сервис.
+          объектах именно ООО "МКС".
         </Text>
 
         <Text>
@@ -60,32 +59,6 @@ function AboutUs() {
           специалисты.
         </Text>
       </Activity>
-
-      <Container>
-        <Title>Некоторые объекты</Title>
-        <Objects>
-          <Card>
-            <Link to="/objects">
-              <Img $src={bigTheater} />
-            </Link>
-            <TitleCard>Большой театр</TitleCard>
-          </Card>
-
-          <Card>
-            <Link to="/objects">
-              <Img $src={corston} />
-            </Link>
-            <TitleCard>Гостиничный комплекс Korston Казань</TitleCard>
-          </Card>
-
-          <Card>
-            <Link to="/objects">
-              <Img $src={festivalOmsk} />
-            </Link>
-            <TitleCard>Фестиваль Омск</TitleCard>
-          </Card>
-        </Objects>
-      </Container>
     </Root>
   );
 }
@@ -140,37 +113,6 @@ const TypeOfWork = styled.li`
 const Activity = styled.div`
   max-width: 800px;
   margin-bottom: 30px;
-`;
-
-const Objects = styled.div`
-  display: flex;
-  justify-content: space-between;
-`;
-
-const Card = styled.div`
-  max-width: 375px;
-  margin-bottom: 25px;
-`;
-
-const Img = styled.img.attrs((props) => ({
-  src: props.$src,
-}))`
-  cursor: pointer;
-  height: 280px;
-  margin-bottom: 10px;
-
-  &:hover {
-    opacity: 0.7;
-  }
-`;
-
-const TitleCard = styled.h2`
-  font-size: 25px;
-`;
-
-const Container = styled.div`
-  width: 100%;
-  margin-bottom: 20px;
 `;
 
 export default AboutUs;

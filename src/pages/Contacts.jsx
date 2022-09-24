@@ -7,10 +7,7 @@ function Contacts() {
   return (
     <Root>
       <Information>
-        <Title>
-          Общество с ограниченной ответственностью <br />
-          «Монтаж Комплект Сервис» (ООО «МКС»)
-        </Title>
+        <Title>ООО «МКС»</Title>
 
         <Text>
           ИНН 7811746018 <br /> КПП 781101001 <br /> ОГРН 1207800038676 <br />
@@ -24,17 +21,16 @@ function Contacts() {
         </Text>
 
         <Text>
-          Адрес:192076, Россия, г. Санкт-Петербург, <br /> пр-т Рыбацкий, д.18,
-          корп.2 литер А
+          Адрес:192076, Россия, г. Санкт-Петербург, <br /> пр-т Рыбацкий, д.18
         </Text>
 
         <PhoneNumber>
-          <PhoneImg /> +7(911)820-68-68
+          <PhoneImg /> +7(812)920-88-68
         </PhoneNumber>
 
         <Email>
           <EmailImg />
-          <a href="mailto:mkssro@mail.ru">Email: mkssro@mail.ru</a>
+          <a href="mailto:mkssro@mail.ru">Email: info@mkssro.ru</a>
         </Email>
       </Information>
     </Root>

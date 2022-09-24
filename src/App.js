@@ -29,7 +29,7 @@ const Root = styled.div`
   display: flex;
   flex-direction: column;
   font-family: "Ubuntu";
-  width: 1440px;
+  max-width: 1440px;
   min-height: 100vh;
   margin: 0 auto;
 `;

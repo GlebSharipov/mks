@@ -8,23 +8,17 @@ export const Footer = () => {
   return (
     <Root>
       <ContactInformation>
-        <Address>
-          192076, г. Санкт-Петербург, пр-кт Рыбацкий, д. 18, корп.2 лит. А
-        </Address>
+        <Address>г. Санкт-Петербург</Address>
 
         <PhoneNumber>
-          <PhoneImg /> +7(911)820-68-68
+          <PhoneImg /> +7(812)920-88-68
         </PhoneNumber>
 
         <Email>
           <EmailImg />
-          <a href="mailto:mkssro@mail.ru">mkssro@mail.ru</a>
+          <a href="mailto:mkssro@mail.ru">info@mkssro.ru</a>
         </Email>
       </ContactInformation>
-
-      <Director>
-        Генеральный директор: <br /> Борзенков Игорь Владиславович
-      </Director>
     </Root>
   );
 };
@@ -44,6 +38,7 @@ const ContactInformation = styled.ul`
 
 const Address = styled.li`
   margin-bottom: 10px;
+  padding-left: 3px;
 `;
 
 const PhoneImg = styled.img.attrs({ src: phone })`
@@ -68,9 +63,4 @@ const EmailImg = styled.img.attrs({ src: email })`
 const Email = styled.li`
   display: flex;
   align-items: center;
-`;
-
-const Director = styled.div`
-  line-height: 40px;
-  font-size: 18px;
 `;

@@ -48,16 +48,15 @@ const Root = styled.header`
 `;
 
 const Logo = styled.img.attrs({ src: logo })`
-  width: 140px;
-  height: 100px;
-  margin-right: 70px;
+  width: 170px;
+  height: 105px;
 `;
 
 const Navigation = styled.ul`
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 35px 5px;
 `;
 
