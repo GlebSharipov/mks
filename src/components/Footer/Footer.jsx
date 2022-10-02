@@ -5,62 +5,62 @@ import email from "../../assets/img/email.png";
 import phone from "../../assets/img/phone.png";
 
 export const Footer = () => {
-  return (
-    <Root>
-      <ContactInformation>
-        <Address>г. Санкт-Петербург</Address>
+    return (
+        <Root>
+            <ContactInformation>
+                <PhoneNumber>
+                    <PhoneImg /> +7(812)920-88-68
+                </PhoneNumber>
 
-        <PhoneNumber>
-          <PhoneImg /> +7(812)920-88-68
-        </PhoneNumber>
+                <Email>
+                    <EmailImg />
+                    <a href="mailto:mkssro@mail.ru">info@mkssro.ru</a>
+                </Email>
+            </ContactInformation>
 
-        <Email>
-          <EmailImg />
-          <a href="mailto:mkssro@mail.ru">info@mkssro.ru</a>
-        </Email>
-      </ContactInformation>
-    </Root>
-  );
+            <Address>г. Санкт-Петербург</Address>
+        </Root>
+    );
 };
 
 const Root = styled.footer`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  width: 100%;
-  background-color: ${COLORS.secondary};
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    background-color: ${COLORS.secondary};
 `;
 
 const ContactInformation = styled.ul`
-  font-size: 18px;
+    font-size: 18px;
 `;
 
-const Address = styled.li`
-  margin-bottom: 10px;
-  padding-left: 3px;
+const Address = styled.div`
+    margin-bottom: 10px;
+    padding-left: 3px;
 `;
 
 const PhoneImg = styled.img.attrs({ src: phone })`
-  width: 25px;
-  height: 25px;
-  margin-right: 5px;
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
 `;
 
 const PhoneNumber = styled.li`
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-  padding-left: 3px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding-left: 3px;
 `;
 
 const EmailImg = styled.img.attrs({ src: email })`
-  width: 32px;
-  height: 32px;
-  margin-right: 5px;
+    width: 32px;
+    height: 32px;
+    margin-right: 5px;
 `;
 
 const Email = styled.li`
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 `;
