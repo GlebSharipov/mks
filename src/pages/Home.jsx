@@ -54,6 +54,11 @@ const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding: 15px;
+
+  @media (max-width: 720px) {
+    justify-content: center;
+  }
 `;
 
 const Card = styled.div`
@@ -75,6 +80,10 @@ const Card = styled.div`
 
   &:hover {
     background-color: rgba(66, 164, 234, 0.9);
+  }
+
+  @media (max-width: 375px) {
+    width: 300px;
   }
 `;
 

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { BurgerMenu } from "../../components";
 import styled from "styled-components";
 import logo from "../../assets/img/logo.png";
 import { COLORS } from "../../assets/colors";
@@ -32,6 +33,8 @@ export const Header = () => {
           <Title>Контакты</Title>
         </Link>
       </Navigation>
+
+      <BurgerMenu />
     </Root>
   );
 };
@@ -45,6 +48,11 @@ const Root = styled.header`
   width: 100%;
   border-bottom: 10px solid ${COLORS.secondary};
   border-top: 10px solid ${COLORS.secondary};
+
+  @media (max-width: 900px) {
+    padding: 10px 20px;
+    justify-content: space-between;
+  }
 `;
 
 const Logo = styled.img.attrs({ src: logo })`
@@ -58,6 +66,10 @@ const Navigation = styled.ul`
   align-items: center;
   justify-content: space-around;
   padding: 35px 5px;
+
+  @media (max-width: 720px) {
+    display: none;
+  }
 `;
 
 const Title = styled.li`
@@ -68,5 +80,9 @@ const Title = styled.li`
   &:hover {
     border-bottom: 4px solid ${COLORS.secondary};
     color: ${COLORS.secondary};
+  }
+
+  @media (max-width: 900px) {
+    font-size: 25px;
   }
 `;

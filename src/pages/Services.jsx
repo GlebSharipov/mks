@@ -133,11 +133,21 @@ const Root = styled.div`
 const Container = styled.div`
   display: flex;
   width: 100%;
+  margin-bottom: 15px;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const Title = styled.h2`
   font-size: 30px;
   margin-bottom: 10px;
+
+  @media (max-width: 375px) {
+    font-size: 25px;
+  }
 `;
 
 const List = styled.ul`
@@ -158,6 +168,13 @@ const TypesJobs = styled.ul`
   padding: 10px;
   background-color: ${COLORS.secondary};
   margin-right: 50px;
+
+  @media (max-width: 600px) {
+    max-width: 400px;
+    margin: 0;
+    margin-bottom: 15px;
+    text-align: center;
+  }
 `;
 
 const Job = styled.li`
@@ -187,6 +204,10 @@ const Stage = styled.li`
   align-items: center;
   justify-content: space-between;
   margin-bottom: 40px;
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+  }
 `;
 
 const Description = styled.div`
