@@ -1,6 +1,8 @@
 import React, { FC, useState } from "react";
 import styled from "styled-components";
 import burger from "../../assets/img/burger.png";
+import cross from "../../assets/img/cross.png";
+
 import { Link } from "react-router-dom";
 import { COLORS } from "../../assets/colors";
 
@@ -18,6 +20,12 @@ export const BurgerMenu = () => {
           <Overlay onClick={handleVisibleMenu} />
 
           <Menu>
+            <ContainerButton>
+              <ButtonBurger onClick={handleVisibleMenu}>
+                <CrossIcon />
+              </ButtonBurger>
+            </ContainerButton>
+
             <Link to="/">
               <Title onClick={handleVisibleMenu}>Главная</Title>
             </Link>
@@ -48,6 +56,13 @@ const Root = styled.div`
   max-width: 280px;
 `;
 
+const ContainerButton = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 25px;
+`;
+
 const Title = styled.li`
   font-size: 25px;
   margin-bottom: 15px;
@@ -61,6 +76,12 @@ const Title = styled.li`
 `;
 
 const BurgerIcon = styled.img.attrs({ src: burger })`
+  width: 32px;
+  height: 32px;
+  margin-right: 5px;
+`;
+
+const CrossIcon = styled.img.attrs({ src: cross })`
   width: 32px;
   height: 32px;
   margin-right: 5px;

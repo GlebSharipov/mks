@@ -9,6 +9,7 @@ const customStyles = {
   content: {
     maxWidth: "800px",
     width: "100%",
+    maxHeight: "80vh",
     overflow: "auto",
     top: "50%",
     left: "50%",
@@ -201,6 +202,10 @@ const ModalImg = styled.img.attrs((props) => ({
 
   @media (max-width: 400px) {
     font-size: 18px;
+  }
+
+  @media (max-width: 545px) {
+    width: 100%;
   }
 `;
 

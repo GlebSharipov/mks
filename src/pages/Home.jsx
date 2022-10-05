@@ -93,6 +93,10 @@ const Description = styled.div`
   line-height: 30px;
   text-align: center;
   margin-bottom: 20px;
+
+  @media (max-width: 420px) {
+    padding: 0 5px;
+  }
 `;
 
 export default Home;
