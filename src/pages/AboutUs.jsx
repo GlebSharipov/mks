@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
+import { COLORS } from "../assets/colors";
 
 function AboutUs() {
   return (
@@ -25,12 +27,25 @@ function AboutUs() {
 
       <Directions>
         <TitleDirection>Направления</TitleDirection>
-        <TypeOfWork>- Вентиляция и кондиционирование.</TypeOfWork>
-        <TypeOfWork>- Отопление.</TypeOfWork>
-        <TypeOfWork>- Водоснабжение и водоотведение.</TypeOfWork>
-        <TypeOfWork>- Электрика.</TypeOfWork>
-        <TypeOfWork>- Пожаро-охранная сигнализация.</TypeOfWork>
-        <TypeOfWork>- Видеонаблюдение.</TypeOfWork>
+
+        <Link to={"/services"}>
+          <TypeOfWork>- Вентиляция и кондиционирование.</TypeOfWork>
+        </Link>
+        <Link to={"/services"}>
+          <TypeOfWork>- Отопление.</TypeOfWork>
+        </Link>
+        <Link to={"/services"}>
+          <TypeOfWork>- Водоснабжение и водоотведение.</TypeOfWork>
+        </Link>
+        <Link to={"/services"}>
+          <TypeOfWork>- Электрика.</TypeOfWork>
+        </Link>
+        <Link to={"/services"}>
+          <TypeOfWork>- Пожаро-охранная сигнализация.</TypeOfWork>
+        </Link>
+        <Link to={"/services"}>
+          <TypeOfWork>- Видеонаблюдение.</TypeOfWork>
+        </Link>
       </Directions>
 
       <Activity>
@@ -106,7 +121,7 @@ const TypeOfWork = styled.li`
   color: #7a8999;
 
   &:hover {
-    color: blue;
+    color: ${COLORS.secondary};
   }
 `;
 

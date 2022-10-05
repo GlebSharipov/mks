@@ -119,14 +119,14 @@ export const cards = [
   {
     id: 6,
     img: [redStar, redStar2],
-    title: "Футбольный стадион красная звезда ",
+    title: 'Футбольный стадион "Красная звезда" ',
     description: ["Система вентиляции.", "Автоматизация."],
   },
 
   {
     id: 7,
     img: [mediaMarkt],
-    title: "Медия маркт",
+    title: "Медиа Маркт",
     description: [
       "Система вентиляции.",
       "Система кондиционирования.",
@@ -147,14 +147,14 @@ export const cards = [
   {
     id: 9,
     img: [carDealershipWV],
-    title: "Автосалон WV",
+    title: "Автосалон VW",
     description: ["Система  вентиляции.", "Система кондиционирования."],
   },
 
   {
     id: 10,
     img: [hotelComplexWV],
-    title: "Гостиничный комплекс WV Калуга",
+    title: "Гостиничный комплекс VW Калуга",
     description: [
       "Система вентиляции.",
       "Система кондиционирования.",
@@ -168,7 +168,7 @@ export const cards = [
   {
     id: 11,
     img: [arena1, arena2, termalUnitArena, termalUnit],
-    title: "Ледовый комплекс 10 000 зрителей",
+    title: "Ледовый комплекс на 10 000 зрителей",
     description: [
       "Система вентиляции.",
       "Система кондиционирования.",
@@ -179,7 +179,7 @@ export const cards = [
   {
     id: 12,
     img: [festival],
-    title: "Бизнес центр Фестиваль",
+    title: 'Бизнес центр "Фестиваль"',
     description: [
       "Система вентиляций.",
       "Система кондиционирования.",
@@ -204,7 +204,7 @@ export const cards = [
   {
     id: 14,
     img: [leruaMerlen1],
-    title: "Lerua Merlen",
+    title: "Леруа Мерлен",
     description: [
       "Система вентиляции.",
       "Система кондиционирования.",
