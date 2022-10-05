@@ -3,11 +3,12 @@ import styled from "styled-components";
 import burger from "../../assets/img/burger.png";
 import cross from "../../assets/img/cross.png";
 
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { COLORS } from "../../assets/colors";
 
 export const BurgerMenu = () => {
   const [visibleMenu, setVisibleMenu] = useState(false);
+  const location = useLocation().pathname;
 
   const handleVisibleMenu = () => {
     setVisibleMenu((prevState) => !prevState);
@@ -27,19 +28,41 @@ export const BurgerMenu = () => {
             </ContainerButton>
 
             <Link to="/">
-              <Title onClick={handleVisibleMenu}>Главная</Title>
+              <Title $isActive={location === "/"} onClick={handleVisibleMenu}>
+                Главная
+              </Title>
             </Link>
             <Link to="/about-us">
-              <Title onClick={handleVisibleMenu}>О нас</Title>
+              <Title
+                $isActive={location === "/about-us"}
+                onClick={handleVisibleMenu}
+              >
+                О нас
+              </Title>
             </Link>
             <Link to="/services">
-              <Title onClick={handleVisibleMenu}>Услуги</Title>
+              <Title
+                $isActive={location === "/services"}
+                onClick={handleVisibleMenu}
+              >
+                Услуги
+              </Title>
             </Link>
             <Link to="/objects">
-              <Title onClick={handleVisibleMenu}>Объекты</Title>
+              <Title
+                $isActive={location === "/objects"}
+                onClick={handleVisibleMenu}
+              >
+                Объекты
+              </Title>
             </Link>
             <Link to="/contacts">
-              <Title onClick={handleVisibleMenu}>Контакты</Title>
+              <Title
+                $isActive={location === "/contacts"}
+                onClick={handleVisibleMenu}
+              >
+                Контакты
+              </Title>
             </Link>
           </Menu>
         </>
@@ -68,7 +91,7 @@ const Title = styled.li`
   margin-bottom: 15px;
   border-bottom: 4px solid #ffffff;
   cursor: pointer;
-
+  color: ${(props) => (props.$isActive ? COLORS.secondary : null)};
   &:hover {
     border-bottom: 4px solid ${COLORS.secondary};
     color: ${COLORS.secondary};

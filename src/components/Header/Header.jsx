@@ -1,11 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { BurgerMenu } from "../../components";
 import styled from "styled-components";
 import logo from "../../assets/img/logo.png";
 import { COLORS } from "../../assets/colors";
 
 export const Header = () => {
+  const location = useLocation().pathname;
+
   return (
     <Root>
       <Link to="/">
@@ -14,23 +16,23 @@ export const Header = () => {
 
       <Navigation>
         <Link to="/">
-          <Title>Главная</Title>
+          <Title $isActive={location === "/"}>Главная</Title>
         </Link>
 
         <Link to="/about-us">
-          <Title>О нас</Title>
+          <Title $isActive={location === "/about-us"}>О нас</Title>
         </Link>
 
         <Link to="/services">
-          <Title>Услуги</Title>
+          <Title $isActive={location === "/services"}>Услуги</Title>
         </Link>
 
         <Link to="/objects">
-          <Title>Объекты</Title>
+          <Title $isActive={location === "/objects"}>Объекты</Title>
         </Link>
 
         <Link to="/contacts">
-          <Title>Контакты</Title>
+          <Title $isActive={location === "/contacts"}>Контакты</Title>
         </Link>
       </Navigation>
 
@@ -76,6 +78,7 @@ const Title = styled.li`
   font-size: 30px;
   border-bottom: 4px solid #ffffff;
   cursor: pointer;
+  color: ${(props) => (props.$isActive ? COLORS.secondary : null)};
 
   &:hover {
     border-bottom: 4px solid ${COLORS.secondary};
