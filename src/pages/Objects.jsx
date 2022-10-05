@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { cards, archive } from "../utils/mock";
+import { cards } from "../utils/mock";
 import Modal from "react-modal";
 import cross from "../assets/img/cross.png";
 import { COLORS } from "../assets/colors";
@@ -25,6 +25,8 @@ Modal.setAppElement("#root");
 function Objects() {
   const [modalIsOpen, setIsOpen] = useState(false);
   const [cardId, setCardId] = useState();
+  const [imgId, setImgId] = useState(0);
+
   const [isOpenArchive, setIsOpenArchive] = useState(false);
 
   function openModal(id) {
@@ -34,6 +36,7 @@ function Objects() {
 
   function closeModal() {
     setIsOpen(false);
+    setImgId(0);
   }
 
   const handleOpenArchive = () => {
@@ -42,6 +45,10 @@ function Objects() {
     } else {
       setIsOpenArchive(true);
     }
+  };
+
+  const handleOpenImg = (index) => {
+    setImgId(index);
   };
 
   return (
@@ -53,14 +60,24 @@ function Objects() {
         contentLabel="Example Modal"
       >
         <TopPart>
-          <Title>{cards[cardId]?.title || archive[cardId]?.title}</Title>
+          <Title>{cards[cardId]?.title}</Title>
 
           <CloseButton onClick={closeModal}>
             <CrossIcon $src={cross} />
           </CloseButton>
         </TopPart>
 
-        <ModalImg $src={cards[cardId]?.img || archive[cardId]?.img} />
+        <ModalImg $src={cards[cardId]?.img[imgId]} />
+
+        <ContainerImg>
+          {cards[cardId]?.img.map((img, index) => (
+            <ExtraImg
+              key={index}
+              onClick={() => handleOpenImg(index)}
+              $src={img}
+            />
+          ))}
+        </ContainerImg>
 
         <Title>Выполненные работы:</Title>
 
@@ -68,32 +85,24 @@ function Objects() {
           {cards[cardId]?.description.map((text, index) => (
             <Text key={index}>- {text}</Text>
           ))}
-
-          {archive[cardId]?.description.map((text, index) => (
-            <Text key={index}>- {text}</Text>
-          ))}
         </Description>
       </Modal>
 
       <CardContainer>
-        {cards.map((card) => (
-          <Card key={card.id}>
-            <Img $src={card.img} onClick={() => openModal(card.id)} />
-            <Title>{card.title}</Title>
-          </Card>
-        ))}
+        {isOpenArchive
+          ? cards.map((card) => (
+              <Card key={card.id}>
+                <Img $src={card.img[0]} onClick={() => openModal(card.id)} />
+                <Title>{card.title}</Title>
+              </Card>
+            ))
+          : cards.slice(0, 3).map((card) => (
+              <Card key={card.id}>
+                <Img $src={card.img[0]} onClick={() => openModal(card.id)} />
+                <Title>{card.title}</Title>
+              </Card>
+            ))}
       </CardContainer>
-
-      {isOpenArchive ? (
-        <CardContainer>
-          {archive.map((card) => (
-            <Card onClick={() => openModal(card.id)} key={card.id}>
-              <Img $src={card.img} />
-              <Title>{card.title}</Title>
-            </Card>
-          ))}
-        </CardContainer>
-      ) : null}
 
       <ButtonArchive onClick={handleOpenArchive}>
         {isOpenArchive ? "Закрыть Архив" : "Открыть Архив"}
@@ -111,6 +120,22 @@ const Root = styled.div`
   @media (max-width: 475px) {
     padding: 10px;
   }
+`;
+
+const ExtraImg = styled.img.attrs((props) => ({
+  src: props.$src,
+}))`
+  cursor: pointer;
+  width: 85px;
+  height: 85px;
+  margin-right: 10px;
+`;
+
+const ContainerImg = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 10px;
 `;
 
 const CardContainer = styled.div`
