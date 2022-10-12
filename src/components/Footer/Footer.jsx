@@ -14,7 +14,7 @@ export const Footer = () => {
 
         <Email>
           <EmailImg />
-          <a href="mailto:mkssro@mail.ru">info@mkssro.ru</a>
+          <a href="mailto:info@mkssro.ru">info@mkssro.ru</a>
         </Email>
       </ContactInformation>
 

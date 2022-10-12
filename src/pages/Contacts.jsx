@@ -30,7 +30,7 @@ function Contacts() {
 
         <Email>
           <EmailImg />
-          <a href="mailto:mkssro@mail.ru">Email: info@mkssro.ru</a>
+          <a href="mailto:info@mkssro.ru">Email: info@mkssro.ru</a>
         </Email>
       </Information>
     </Root>
