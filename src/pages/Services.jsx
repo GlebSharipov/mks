@@ -33,7 +33,7 @@ function Services() {
 
       <StagesOfWork>
         {description[id].data.map((obj, index) => (
-          <Stage>
+          <Stage key={index}>
             {index % 2 ? (
               <>
                 <StageImg $src={obj.img} />
