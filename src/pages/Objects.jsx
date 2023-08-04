@@ -96,7 +96,7 @@ function Objects() {
                 <Title>{card.title}</Title>
               </Card>
             ))
-          : cards.slice(0, 3).map((card) => (
+          : cards.slice(0, 2).map((card) => (
               <Card key={card.id}>
                 <Img $src={card.img[0]} onClick={() => openModal(card.id)} />
                 <Title>{card.title}</Title>
