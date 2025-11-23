@@ -162,11 +162,11 @@ const ButtonArchive = styled.button`
   }
 `;
 
-const Container = styled.div`
-  max-width: 380px;
-  padding-left: 5px;
-  padding-top: 10px;
-`;
+// const Container = styled.div`
+//   max-width: 380px;
+//   padding-left: 5px;
+//   padding-top: 10px;
+// `;
 
 const TopPart = styled.div`
   display: flex;

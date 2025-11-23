@@ -17,10 +17,13 @@ import mediaMarkt from "../assets/img/Медия_маркт.jpg";
 import carDealershipWV from "../assets/img/Автосалон_WV.jpg";
 import hotelComplexWV from "../assets/img/Гостиничный_комплекс_WV.jpg";
 
+import voxhall1 from "../assets/img/Voxhall1.jpeg";
+import voxhall2 from "../assets/img/Voxhall2.jpeg";
+
 import arena1 from "../assets/img/arena-1.jpeg";
-import arena2 from "../assets/img/arena-2.jpg";
-import termalUnitArena from "../assets/img/тепловой_узел_Арена.jpg";
-import termalUnit from "../assets/img/Тепловой_узел2.JPG";
+// import arena2 from "../assets/img/arena-2.jpg";
+// import termalUnitArena from "../assets/img/тепловой_узел_Арена.jpg";
+// import termalUnit from "../assets/img/Тепловой_узел2.JPG";
 
 import festival from "../assets/img/Festival_Omsk.jpg";
 import korston from "../assets/img/Korston.jpg";
@@ -55,17 +58,17 @@ import installationWork from "../assets/img/services/installation_work.jpg";
 import commissioningWorks from "../assets/img/services/commissioning_works.jpg";
 import serviceAndRepair from "../assets/img/services/service_and_repair.jpg";
 
-import pipeKosmos from "../assets/img/Воздуховод_гостиница_космос.jpeg";
-import pipeKosmos2 from "../assets/img/Воздуховод_гостиница_космос1.jpeg";
+// import pipeKosmos from "../assets/img/Воздуховод_гостиница_космос.jpeg";
+// import pipeKosmos2 from "../assets/img/Воздуховод_гостиница_космос1.jpeg";
 
-import pipe from "../assets/img/Воздуховод1.jpg";
-import pipe2 from "../assets/img/Воздуховод2.jpg";
-import pipe3 from "../assets/img/Воздуховод3.jpg";
+// import pipe from "../assets/img/Воздуховод1.jpg";
+// import pipe2 from "../assets/img/Воздуховод2.jpg";
+// import pipe3 from "../assets/img/Воздуховод3.jpg";
 
-import networkEngineering from "../assets/img/Инженерные_сети.jpg";
-import installationExample from "../assets/img/Пример монтажа оборудования сетей.jpg";
-import installationExample2 from "../assets/img/Пример монтажа оборудования.jpg";
-import installationExample3 from "../assets/img/Пример монтажа оборудования2.jpg";
+// import networkEngineering from "../assets/img/Инженерные_сети.jpg";
+// import installationExample from "../assets/img/Пример монтажа оборудования сетей.jpg";
+// import installationExample2 from "../assets/img/Пример монтажа оборудования.jpg";
+// import installationExample3 from "../assets/img/Пример монтажа оборудования2.jpg";
 
 export const cards = [
   {
@@ -79,7 +82,7 @@ export const cards = [
   {
     id: 1,
     img: [cosmos, cosmos2, cosmos3],
-    title: "Гостиничный комплекс Cosmos 4*",
+    title: "Гостиничный комплекс COSMOS 4*",
     description: [
       "Система общеобменной вентиляции",
       "Система дымоудаления",
@@ -101,7 +104,7 @@ export const cards = [
   {
     id: 3,
     img: [ghe1, ghe2],
-    title: "ЖК «Ghe»",
+    title: "ЖК «СНЕ»",
     description: ["АППЗ."],
   },
 
@@ -262,6 +265,16 @@ export const cards = [
       "Водоснабжение.",
       "Водоотведение.",
       "Автоматизация.",
+    ],
+  },
+
+  {
+    id: 19,
+    img: [voxhall1, voxhall2],
+    title: "ЖК «Voxhall»",
+    description: [
+      "Раздел ЭОМ (устройству системы внутреннего электроосвещения и силового оборудования).",
+      "Раздел СС (пожарная сигнализация, видеонаблюдение, системы оповещения и  управление доступом)",
     ],
   },
 ];
