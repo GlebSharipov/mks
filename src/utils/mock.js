@@ -73,6 +73,16 @@ import serviceAndRepair from "../assets/img/services/service_and_repair.jpg";
 export const cards = [
   {
     id: 0,
+    img: [voxhall1, voxhall2],
+    title: "ЖК «Voxhall»",
+    description: [
+      "Раздел ЭОМ (устройству системы внутреннего электроосвещения и силового оборудования).",
+      "Раздел СС (пожарная сигнализация, видеонаблюдение, системы оповещения и  управление доступом)",
+    ],
+  },
+
+  {
+    id: 1,
     img: [kkp1, kkp2],
     title: "ЖК «Новое Колпино»",
     description: [
@@ -80,7 +90,7 @@ export const cards = [
     ],
   },
   {
-    id: 1,
+    id: 2,
     img: [cosmos, cosmos2, cosmos3],
     title: "Гостиничный комплекс COSMOS 4*",
     description: [
@@ -93,7 +103,7 @@ export const cards = [
   },
 
   {
-    id: 2,
+    id: 3,
     img: [mangerok1, mangerok2, mangerok3],
     title: "Всесезонный курорт «Манжерок», Республика Алтай",
     description: [
@@ -102,14 +112,14 @@ export const cards = [
   },
 
   {
-    id: 3,
+    id: 4,
     img: [ghe1, ghe2],
     title: "ЖК «СНЕ»",
     description: ["АППЗ."],
   },
 
   {
-    id: 4,
+    id: 5,
     img: [rostelekom, rostelekom2],
     title: "Серверная РосТелеком",
     description: [
@@ -127,7 +137,7 @@ export const cards = [
   },
 
   {
-    id: 5,
+    id: 6,
     img: [zhkDmitrovskaya, zhkDmitrovskaya2],
     title: 'ЖК "Дмитровский парк"',
     description: [
@@ -136,36 +146,37 @@ export const cards = [
       "Система дымоудаления.",
     ],
   },
+
   {
-    id: 6,
+    id: 7,
     img: [abk],
     title: "АБК РЖД",
     description: ["Тепловые сети.", "Система водоснабжения."],
   },
 
   {
-    id: 7,
+    id: 8,
     img: [alpi],
     title: "АЛПИ",
     description: ["Система вентиляции."],
   },
 
   {
-    id: 8,
+    id: 9,
     img: [grandTheatre, grandTheatre2],
     title: "Большой театр",
     description: ["Система вентиляции.", "Система кондиционирования."],
   },
 
   {
-    id: 9,
+    id: 10,
     img: [redStar, redStar2],
     title: 'Футбольный стадион "Красная звезда" ',
     description: ["Система вентиляции.", "Автоматизация."],
   },
 
   {
-    id: 10,
+    id: 11,
     img: [mediaMarkt],
     title: "Медиа Маркт",
     description: [
@@ -179,21 +190,21 @@ export const cards = [
   },
 
   {
-    id: 11,
+    id: 12,
     img: [privateHotel2, privateHotel, privateHotel3, privateHotelPool],
     title: "VIP гостиница",
     description: ["Система  вентиляции.", "Система кондиционирования."],
   },
 
   {
-    id: 12,
+    id: 13,
     img: [carDealershipWV],
     title: "Автосалон VW",
     description: ["Система  вентиляции.", "Система кондиционирования."],
   },
 
   {
-    id: 13,
+    id: 14,
     img: [hotelComplexWV],
     title: "Гостиничный комплекс VW Калуга",
     description: [
@@ -207,7 +218,7 @@ export const cards = [
   },
 
   {
-    id: 14,
+    id: 15,
     img: [arena1],
     title: "Ледовый комплекс на 10 000 зрителей",
     description: [
@@ -218,7 +229,7 @@ export const cards = [
   },
 
   {
-    id: 15,
+    id: 16,
     img: [festival],
     title: 'Бизнес центр "Фестиваль"',
     description: [
@@ -229,7 +240,7 @@ export const cards = [
   },
 
   {
-    id: 16,
+    id: 17,
     img: [korston],
     title: "Гостиничный комплекс Korston Казань",
     description: [
@@ -243,7 +254,7 @@ export const cards = [
   },
 
   {
-    id: 17,
+    id: 18,
     img: [leruaMerlen1],
     title: "Леруа Мерлен",
     description: [
@@ -255,7 +266,7 @@ export const cards = [
   },
 
   {
-    id: 18,
+    id: 19,
     img: [obi1],
     title: "OBI",
     description: [
@@ -265,16 +276,6 @@ export const cards = [
       "Водоснабжение.",
       "Водоотведение.",
       "Автоматизация.",
-    ],
-  },
-
-  {
-    id: 19,
-    img: [voxhall1, voxhall2],
-    title: "ЖК «Voxhall»",
-    description: [
-      "Раздел ЭОМ (устройству системы внутреннего электроосвещения и силового оборудования).",
-      "Раздел СС (пожарная сигнализация, видеонаблюдение, системы оповещения и  управление доступом)",
     ],
   },
 ];

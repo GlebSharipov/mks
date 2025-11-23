@@ -11,7 +11,7 @@ function Contacts() {
 
         <Text>
           ИНН 7811775234 <br /> КПП 781101001 <br /> ОГРН 1227800058342 <br />
-          <TextRed>ОКПО 75399876</TextRed>
+          {/* <TextRed>ОКПО 75399876</TextRed> */}
         </Text>
 
         <Text>
@@ -71,10 +71,10 @@ const Text = styled.p`
   color: #7a8999;
 `;
 
-const TextRed = styled.p`
-  font-size: 18px;
-  color: #ff0000;
-`;
+// const TextRed = styled.p`
+//   font-size: 18px;
+//   color: #ff0000;
+// `;
 
 const PhoneImg = styled.img.attrs({ src: phone })`
   width: 25px;
