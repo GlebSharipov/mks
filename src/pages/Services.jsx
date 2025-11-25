@@ -1,10 +1,13 @@
 import React, { useState } from "react";
+import { useLocation } from "react-router-dom";
 import styled from "styled-components";
 import { COLORS } from "../assets/colors";
 import { jobs, description } from "../utils/mock";
 
 function Services() {
-  const [id, setId] = useState(0);
+  const location = useLocation();
+  const { jobId } = location.state || 0;
+  const [id, setId] = useState(jobId || 0);
 
   const handleClickJob = (id) => {
     setId(id);

@@ -11,7 +11,7 @@ function Home() {
       <Directions>
         <Container>
           {jobs.map((job) => (
-            <Link key={job.id} to={"/services"}>
+            <Link key={job.id} to={"/services"} state={{ jobId: job.id }}>
               <Card>{job.text} </Card>
             </Link>
           ))}
