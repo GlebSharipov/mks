@@ -1,8 +1,8 @@
 import abk from "../assets/img/ABK_RJD_Adler.jpg";
 import alpi from "../assets/img/Alpi.jpg";
 
-import grandTheatre from "../assets/img/Большой_театр2.jpg";
-import grandTheatre2 from "../assets/img/Большой_театр.jpg";
+import grandTheatre from "../assets/img/big_hous2.jpg";
+import grandTheatre2 from "../assets/img/big_hous.jpg";
 
 import privateHotel from "../assets/img/Частная_гостиница4.jpg";
 import privateHotel2 from "../assets/img/Частная_гостиница2.jpg";
@@ -14,8 +14,8 @@ import redStar2 from "../assets/img/Красная_звезда2.jpeg";
 
 import mediaMarkt from "../assets/img/Медия_маркт.jpg";
 
-import carDealershipWV from "../assets/img/Автосалон_WV.jpg";
-import hotelComplexWV from "../assets/img/Гостиничный_комплекс_WV.jpg";
+import carDealershipWV from "../assets/img/Автосалон_VW.jpg";
+import hotelComplexWV from "../assets/img/hotel_VW.jpg";
 
 import voxhall1 from "../assets/img/Voxhall1.jpeg";
 import voxhall2 from "../assets/img/Voxhall2.jpeg";
